@@ -1,3 +1,7 @@
 @import 'styles/main';
 @import 'components/components';
 @import 'pages/pages';
+
+body {
+    background-color: $gray4;
+}
