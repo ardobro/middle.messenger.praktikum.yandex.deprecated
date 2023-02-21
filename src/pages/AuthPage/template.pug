@@ -1,5 +1,13 @@
 extends ../page.pug
 
 block page
-    h1 Auth page
-    +button({ type: 'submit', text: 'Submit' })
+    main.auth-page
+        .auth
+            h1.auth__title Sign in
+            form.auth-form
+                div.auth-form__body
+                    +input({ name: 'login', placeholder: 'Login' })
+                    +input({ name: 'password', placeholder: 'Password' })
+                div.auth-form__footer
+                    +button({ type: 'submit', text: 'Sign in' })
+                    a.auth-form__link(href="/src/pages/RegistrationPage/template.pug") Create account

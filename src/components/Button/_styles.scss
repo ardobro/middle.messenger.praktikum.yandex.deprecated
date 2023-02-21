@@ -1,5 +1,6 @@
 .button {
     @include text-14;
+    @include outline;
 
     background-color: $buttonBackgroundColor;
     border: none;
@@ -7,7 +8,6 @@
     color: $white;
     cursor: pointer;
     height: 50px;
-    outline-offset: 4px;
     padding: 12px 40px;
     text-align: center;
     transition: transform $delay-200 ease, background-color $delay-200 ease, outline-offset $delay-200 ease;
@@ -25,10 +25,5 @@
         &:hover {
             background-color: darken($color: $buttonBackgroundColor, $amount: 20%);
         }
-    }
-
-    &:focus-visible {
-        outline: 2px solid $buttonBackgroundColor;
-        outline-offset: 2px;
     }
 }
