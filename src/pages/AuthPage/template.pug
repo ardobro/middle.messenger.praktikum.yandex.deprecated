@@ -7,7 +7,7 @@ block page
             form.auth-form
                 div.auth-form__body
                     +input({ name: 'login', placeholder: 'Login' })
-                    +input({ name: 'password', placeholder: 'Password' })
+                    +input({ name: 'password', type: 'password', placeholder: 'Password' })
                 div.auth-form__footer
                     +button({ type: 'submit', text: 'Sign in' })
                     a.auth-form__link(href="/src/pages/RegistrationPage/template.pug") Create account

@@ -2,6 +2,7 @@ $inputBackgroundColor: $black;
 
 .input {
     @include text-14;
+    @include outline;
 
     background-color: $inputBackgroundColor;
     border: 1px solid $inputBackgroundColor;
@@ -9,14 +10,10 @@ $inputBackgroundColor: $black;
     caret-color: $accentColor;
     height: 46px;
     padding: 8px 12px 8px 16px;
-    transition: outline $delay-200 ease;
+    transition: outline-offset $delay-200 ease;
     width: 100%;
 
     &::placeholder {
         color: $gray1;
-    }
-
-    &:focus {
-        border: 1px solid $accentColor;
     }
 }
