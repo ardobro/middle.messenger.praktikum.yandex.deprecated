@@ -8,5 +8,14 @@ html(lang="en")
         title Messenger
     body
         include ../ui/ui.pug
+        div.nav
+            .nav__title Navigation
+            ul.nav__list
+                li.nav__item
+                    a.nav__link(href="/src/pages/AuthPage/template.pug") Auth
+                li.nav__item
+                    a.nav__link(href="/src/pages/RegistrationPage/template.pug") Registration
+                li.nav__item
+                    a.nav__link(href="/src/pages/ProfilePage/template.pug") Profile
         //- include ../components/components.pug
         block page

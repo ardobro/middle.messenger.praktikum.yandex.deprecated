@@ -1,0 +1,25 @@
+extends ../page.pug
+
+block page
+    main.profile-page
+        form.profile-form
+            .profile-form__head
+                label.profile-form__avatar-label(for="avatar") Change
+                    input.profile-form__avatar-input#avatar(type="file", name="avatar")
+                h1.profile-form__username Jojo
+            .profile-form__body
+                label.label Email
+                    +input({ type: 'email', name: 'email', placeholder: 'Email', value: 'jotaro.kujo@yandex.ru' })
+                label.label Login
+                    +input({ name: 'login', placeholder: 'Login', value: 'jokujo' })
+                label.label First name
+                    +input({ name: 'first_name', placeholder: 'First name', value: 'Jotaro' })
+                label.label Second name
+                    +input({ name: 'second_name', placeholder: 'Second name', value: 'Kujo' })
+                label.label Display name
+                    +input({ name: 'display_name', placeholder: 'Display name', value: 'Jojo' })
+                label.label Phone
+                    +input({ name: 'phone', placeholder: 'Phone', value: '+7 (952) 424-51-45' })
+            .profile-form__footer
+                +button({ type: 'button', text: 'Sign out' })
+                +button({ type: 'button', text: 'Change' })
