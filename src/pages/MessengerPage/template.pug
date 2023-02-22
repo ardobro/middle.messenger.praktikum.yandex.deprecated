@@ -81,7 +81,7 @@ block page
             .sidebar-header
                 h1.sidebar-header__title Messages
                 a.sidebar-header__link(href="")
-                    //- include ../../../static/icons/settings.svg
+                    include ../../../static/icons/settings.svg
             form.sidebar-search
                 +input({ name: 'search', placeholder: 'Search', autocomplete: 'off' })
             .chats-wrapper
@@ -98,7 +98,7 @@ block page
                         h3.chat-view__title Jotaro Kujo
                         div.chat-view__status Online
                     button.chat-view__action-button
-                        //- include ../../../static/icons/ellipsis-vertical.svg
+                        include ../../../static/icons/ellipsis-vertical.svg
                 .chat-view__messages-wrapper
                     ul.messages-list
                         li.message-list__item   
@@ -125,8 +125,8 @@ block page
                 .chat-view__message-form-wrapper
                     form.message-form
                         label.message-form__file-label(for="file")
-                            //- include ../../../static/icons/paperclip.svg
+                            include ../../../static/icons/paperclip.svg
                             input#file.message-form__file-input(type="file", name="file")
                         +input({ type: 'text', name: 'message', placeholder: 'Message', autocomplete: 'off' })
                         button.message-form__submit-button(type="submit")
-                            //- include ../../../static/icons/send-message.svg
+                            include ../../../static/icons/send-message.svg
