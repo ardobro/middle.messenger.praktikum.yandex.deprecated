@@ -1,0 +1,8 @@
+extends ../page.pug
+
+block page
+    main.error-page
+        .error
+            h1.error__title 500
+            p.error__description We broke something #{':('}
+            a.button.error__back-button(href="/src/pages/MessengerPage/template.pug") Back to messeges

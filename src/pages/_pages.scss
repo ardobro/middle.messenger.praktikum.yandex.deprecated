@@ -57,3 +57,28 @@
         }
     }
 }
+
+.error-page {
+    display: grid;
+    height: 100vh;
+    place-content: center;
+
+    .error {
+        width: 1240px;
+
+        &__title {
+            font-size: 64px;
+            font-weight: 600;
+        }
+
+        &__description {
+            font-size: 36px;
+        }
+
+        &__back-button {
+            display: inline-block;
+            height: auto;
+            margin-top: 32px;
+        }
+    }
+}
