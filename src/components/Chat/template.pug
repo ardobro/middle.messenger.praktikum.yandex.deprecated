@@ -1,0 +1,15 @@
+mixin chat({ username, datetime, lastMessage, unreadMessagesCount })
+    article.chat(data-unread=unreadMessagesCount ? 'true' : 'false')
+        .chat__avatar-wrapper
+            img.chat__avatar(height="48px", width="48px")
+            span.chat__online-status
+        .chat__body-wrapper
+            .chat__line
+                h2.chat__title(title=username) #{username}
+                .chat__last-message-datetime #{datetime}
+            .chat__line
+                p.chat__message-preview(title=lastMessage) #{lastMessage}
+                if unreadMessagesCount
+                    span.chat__unread-messages-count #{unreadMessagesCount}
+                else
+                    span +

@@ -1,0 +1,283 @@
+.messages-page {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    
+    .sidebar {
+        background-color: $primaryBackgroundColor;
+        border-right: 1px solid $borderColor;
+        display: grid;
+        grid-template-rows: auto auto 1fr;
+        row-gap: 16px;
+        overflow: hidden;
+
+        &-header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            padding: 0 16px;
+
+            &__title {
+                line-height: 30px;
+                font-size: 24px;
+                font-weight: 700;
+            }
+
+            &__link {
+                cursor: pointer;
+                display: grid;
+                flex: 0 0 24px;
+                place-content: center;
+
+                .settings-icon {
+                    path {
+                        fill: $gray1;
+                        transition: fill $delay-200 ease;
+                    }
+
+                    height: 24px;
+                    width: 24px;
+                }
+
+                &:hover {
+                    path {
+                        fill: $white;
+                    }
+                }
+            }
+        }
+
+        &-search {
+            padding: 0 16px;
+        }
+
+        .chats-wrapper {
+            overflow: auto;
+            padding-bottom: 16px;
+        }
+    }
+
+    .main {
+        background-color: $secondaryBackgroundColor;
+
+        .chat-view {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100%;
+
+            &__messages-wrapper {
+                display: grid;
+                place-content: center;
+            }
+
+            &__header {
+                align-items: center;
+                background-color: $gray2;
+                border-bottom: 1px solid $borderColor;
+                column-gap: 16px;
+                display: flex;
+                padding: 16px;
+
+                .avatar {
+                    background-color: $gray1;
+                    border-radius: 1.5rem;
+                    height: 48px;
+                    width: 48px;
+                }
+            }
+
+            &__user-info {
+                display: grid;
+                flex: 1 1 auto;
+            }
+
+            &__title {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+            }
+
+            &__status {
+                color: $accentColor;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 17px;
+            }
+
+            &__action-button {
+                display: grid;
+                cursor: pointer;
+                flex: 0 0 40px;
+                height: 40px;
+                place-content: center;
+
+                .ellipsis-vertical-icon {
+                    path {
+                        fill: $gray1;
+                        transition: fill $delay-200 ease;
+                    }
+
+                    height: 24px;
+                    width: 24px;
+                }
+
+                &:hover {
+                    .ellipsis-vertical-icon path {
+                        fill: $white;
+                    }
+                }
+            }
+            
+            &__messages-wrapper {
+                padding: 32px;
+                align-self: end;
+                justify-self: start;
+
+                .message-group {
+                    column-gap: 12px;
+                    display: grid;
+                    grid-template-columns: 40px 1fr;
+
+                    &__avatar {
+                        background-color: $gray1;
+                        border-radius: 1.5rem;
+                        height: 40px;
+                        width: 40px;
+                    }
+
+                    &__body {
+                        display: grid;
+                        row-gap: 4px;
+                    }
+
+                    &__username {
+                        @include text-14;
+                        font-weight: 400;
+                    }
+
+                    .messages {
+                        display: grid;
+                        row-gap: 8px;
+                    }
+
+                    .message {
+                        border: 1px solid $borderColor;
+                        border-radius: 20px;
+                        display: grid;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        padding: 12px 12px 4px;
+
+                        &__meta-wrapper {
+                            align-items: center;
+                            column-gap: 8px;
+                            display: flex;
+                            justify-self: right;
+                        }
+
+                        &__meta-datetime {
+                            font-size: 12px;
+                            font-weight: 400;
+                            line-height: 15px;
+                        }
+
+                        &:first-child:not(:last-child) {
+                            border-radius: 20px 20px 20px 0;
+                        }
+
+                        &:not(:first-child):not(:last-child) {
+                            border-radius: 0 20px 20px 0;
+                        }
+
+                        &:last-child:not(:first-child) {
+                            border-radius: 0 20px 20px 20px;
+                        }
+                    }
+                }
+            }
+
+            &__message-form-wrapper {
+                background-color: $gray2;
+                border-top: 1px solid $borderColor;
+                padding: 16px;
+
+                .message-form {
+                    align-items: center;
+                    column-gap: 16px;
+                    display: flex;
+
+                    &__file-label {
+                        border-radius: 12px;
+                        display: grid;
+                        cursor: pointer;
+                        flex: 0 0 40px;
+                        height: 40px;
+                        place-content: center;
+                        transition: background-color $delay-200 ease;
+
+                        .paperclip-icon {
+                            path {
+                                fill: $gray1;
+                                transition: fill $delay-200 ease;
+                            }
+
+                            height: 24px;
+                            width: 24px;
+                        }
+
+                        &:hover {
+                            background-color: $gray5;
+
+                            .paperclip-icon path {
+                                fill: $white;
+                            }
+                        }
+                    }
+
+                    &__file-input {
+                        display: none;
+                    }
+
+                    &__message-input {
+                        flex: 1 1 auto;
+                    }
+
+                    &__submit-button {
+                        @include outline;
+
+                        border-radius: 12px;
+                        cursor: pointer;
+                        display: grid;
+                        flex: 0 0 40px;
+                        height: 40px;
+                        place-content: center;
+                        transition: background-color $delay-200 ease;
+
+                        .send-message-icon {
+                            path {
+                                fill: $accentColor;
+                                transition: fill $delay-200 ease;
+                            }
+
+                            height: 24px;
+                            width: 24px;
+                        }
+
+                        &:hover {
+                            background-color: $accentColor;
+
+                            .send-message-icon {
+                                path {
+                                    fill: $white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.profile-page {
+    background-color: $gray2;
+    display: grid;
+    height: 100vh;
+    place-content: center;
+
+    .profile-form {
+        display: grid;
+        row-gap: 32px;
+        width: 600px;
+
+        &__head {
+            display: grid;
+            justify-items: center;
+            row-gap: 8px;
+        }
+
+        &__username {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 28px;
+        }
+
+        &__avatar-label {
+            background-color: $gray1;
+            border-radius: 80px;
+            cursor: pointer;
+            display: grid;
+            height: 160px;
+            place-content: center;
+            width: 160px;
+
+            &:hover {
+                background-color: $red;
+            }
+        }
+
+        &__avatar-input {
+            display: none;
+        }
+
+        &__body {
+            display: grid;
+            row-gap: 8px;
+
+            .label {
+                @include text-14;
+
+                color: $gray1;
+                display: grid;
+                row-gap: 4px;
+            }
+        }
+
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

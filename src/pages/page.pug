@@ -1,0 +1,27 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/src/styles.scss")
+        title Messenger
+    body
+        include ../ui/ui.pug
+        include ../components/components.pug
+        div.nav
+            .nav__title Navigation
+            ul.nav__list
+                li.nav__item
+                    a.nav__link(href="/src/pages/AuthPage/template.pug") Auth
+                li.nav__item
+                    a.nav__link(href="/src/pages/RegistrationPage/template.pug") Registration
+                li.nav__item
+                    a.nav__link(href="/src/pages/MessengerPage/template.pug") Messenger
+                li.nav__item
+                    a.nav__link(href="/src/pages/ProfilePage/template.pug") Profile
+                li.nav__item
+                    a.nav__link(href="/src/pages/NotFoundErrorPage/template.pug") 404 Page
+                li.nav__item
+                    a.nav__link(href="/src/pages/ServerErrorPage/template.pug") 500 Page
+        block page

@@ -1,0 +1,28 @@
+{
+  "name": "middle.messenger.praktikum.yandex",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "parcel index.pug --open",
+    "build": "parcel build index.pug",
+    "start": "node server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ardobro/middle.messenger.praktikum.yandex.git"
+  },
+  "author": "Artyom Dobrodomov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ardobro/middle.messenger.praktikum.yandex/issues"
+  },
+  "homepage": "https://github.com/ardobro/middle.messenger.praktikum.yandex#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "2.8.3",
+    "@parcel/transformer-sass": "2.8.3",
+    "express": "4.18.2",
+    "parcel": "2.8.3"
+  }
+}

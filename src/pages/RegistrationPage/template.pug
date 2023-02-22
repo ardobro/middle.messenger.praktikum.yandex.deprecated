@@ -1,0 +1,18 @@
+extends ../page.pug
+
+block page
+    main.auth-page
+        .auth
+            h1.auth__title Sign up
+            form.auth-form
+                div.auth-form__body
+                    +input({ name: 'login', placeholder: 'Login' })
+                    +input({ name: 'first_name', placeholder: 'First name' })
+                    +input({ name: 'second_name', placeholder: 'Second name' })
+                    +input({ name: 'email', type: 'email', placeholder: 'Email' })
+                    +input({ name: 'phone', type: 'tel', placeholder: 'Phone' })
+                    +input({ name: 'password', type: 'password', placeholder: 'Password' })
+                    +input({ name: 'password', type: 'password', placeholder: 'Password (again)' })
+                div.auth-form__footer
+                    +button({ type: 'submit', text: 'Sign in' })
+                    a.auth-form__link(href="/src/pages/AuthPage/template.pug") I already have an account
