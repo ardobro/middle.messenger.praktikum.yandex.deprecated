@@ -1,4 +1,4 @@
-# [Messenger](https://willowy-bublanina-409ba7.netlify.app/)
+# [Messenger](https://bejewelled-khapse-47b14f.netlify.app/)
 
 ## Описание
 
@@ -23,5 +23,5 @@
 
 ## Ссылки
 
-- [Макеты в Figma](https://www.figma.com/file/rqOtYWFJ807g0KpzCoNkvH/Design-System?node-id=101%3A6&t=HnpKbNff3XLIOCOa-1),
-- [Дев-стенд на Netlify](https://willowy-bublanina-409ba7.netlify.app).
+- [Макеты в Figma](https://www.figma.com/file/rqOtYWFJ807g0KpzCoNkvH/Design-System),
+- [Дев-стенд на Netlify](https://bejewelled-khapse-47b14f.netlify.app/).
