@@ -1,0 +1,132 @@
+extends ../page.pug
+
+block page
+    -
+        var chats = [
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch! SHUT UP! Get outta my face, bitch! SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: '99+',
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: null,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: null,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+            {
+                username: 'Jotaro Kujo',
+                datetime: '14:53',
+                lastMessage: 'SHUT UP! Get outta my face, bitch!',
+                unreadMessagesCount: 3,
+            },
+        ]
+    .messages-page
+        .sidebar
+            .sidebar-header
+                h1.sidebar-header__title Messages
+                a.sidebar-header__link(href="")
+                    //- include ../../../static/icons/settings.svg
+            form.sidebar-search
+                +input({ name: 'search', placeholder: 'Search', autocomplete: 'off' })
+            .chats-wrapper
+                ul.chats-list
+                    li.chats-list__item
+                        each chat in chats 
+                            +chat(chat)
+                        
+        .main
+            .chat-view
+                .chat-view__header
+                    img.avatar(heigth="48", width="48")                
+                    div.chat-view__user-info
+                        h3.chat-view__title Jotaro Kujo
+                        div.chat-view__status Online
+                    button.chat-view__action-button
+                        //- include ../../../static/icons/ellipsis-vertical.svg
+                .chat-view__messages-wrapper
+                    ul.messages-list
+                        li.message-list__item   
+                            .message-group
+                                .message-group__avatar
+                                .message-group__body
+                                    .message-group__username Jotaro Kujo
+                                    ul.messages
+                                        li.message
+                                            p.message_text SHUT UP! Get outta my face, bitch!
+                                            .message__meta-wrapper
+                                                .message__meta-datetime 12:55
+                                                .message__meta-status +
+                                        li.message
+                                            p.message_text SHUT UP! Get outta my face, bitch!
+                                            .message__meta-wrapper
+                                                .message__meta-datetime 12:55
+                                                .message__meta-status +
+                                        li.message
+                                            p.message_text SHUT UP! Get outta my face, bitch!
+                                            .message__meta-wrapper
+                                                .message__meta-datetime 12:55
+                                                .message__meta-status +
+                .chat-view__message-form-wrapper
+                    form.message-form
+                        label.message-form__file-label(for="file")
+                            //- include ../../../static/icons/paperclip.svg
+                            input#file.message-form__file-input(type="file", name="file")
+                        +input({ type: 'text', name: 'message', placeholder: 'Message', autocomplete: 'off' })
+                        button.message-form__submit-button(type="submit")
+                            //- include ../../../static/icons/send-message.svg
